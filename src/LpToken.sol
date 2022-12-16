@@ -1,8 +1,8 @@
 // SPDX-License-Identifier: MIT
 pragma solidity ^0.8.17;
 
-import "solmate/auth/Owned.sol";
-import "solmate/tokens/ERC20.sol";
+import "lib/solmate/src/auth/Owned.sol";
+import "lib/solmate/src//tokens/ERC20.sol";
 
 /// @title LP token
 /// @author out.eth (@outdoteth)
@@ -10,7 +10,11 @@ import "solmate/tokens/ERC20.sol";
 contract LpToken is Owned, ERC20 {
     constructor(string memory pairSymbol)
         Owned(msg.sender)
-        ERC20(string.concat(pairSymbol, " LP token"), string.concat("LP-", pairSymbol), 18)
+        ERC20(
+            string.concat(pairSymbol, " LP token"),
+            string.concat("LP-", pairSymbol),
+            18
+        )
     {}
 
     /// @notice Mints new LP tokens to the given address.

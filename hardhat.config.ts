@@ -24,13 +24,11 @@ import fs from "fs";
 
 dotenv.config();
 
-import "solidity-docgen-forked";
 import "@typechain/hardhat";
 import "@nomiclabs/hardhat-ethers";
 import "@nomiclabs/hardhat-etherscan";
 import "hardhat-gas-reporter";
 import "@tenderly/hardhat-tenderly";
-import "solidity-coverage";
 import "hardhat-contract-sizer";
 import {eEthereumNetwork} from "./deploy/helpers/types";
 
@@ -53,15 +51,10 @@ const hardhatConfig: HardhatUserConfig = {
     except: ["Mock*"],
   },
   paths: {
-    sources: "./contracts",
+    sources: "./src",
     tests: "./test",
     cache: "./cache",
     artifacts: "./artifacts",
-  },
-  docgen: {
-    outputDir: "docs",
-    pages: "items",
-    exclude: ["dependencies", "deployments", "mocks", "test"],
   },
   gasReporter: {
     enabled: REPORT_GAS,
@@ -70,25 +63,13 @@ const hardhatConfig: HardhatUserConfig = {
     // Docs for the compiler https://docs.soliditylang.org/en/v0.8.7/using-the-compiler.html
     compilers: [
       {
-        version: "0.8.10",
+        version: "0.8.17",
         settings: {
           optimizer: {
             enabled: true,
             runs: 4000,
           },
           evmVersion: "london",
-        },
-      },
-      {
-        version: "0.7.6",
-        settings: {
-          optimizer: {
-            enabled: true,
-            runs: 800,
-          },
-          metadata: {
-            bytecodeHash: "none",
-          },
         },
       },
     ],
