@@ -1,0 +1,88 @@
+{
+	"compiler": {
+		"version": "0.8.10+commit.fc410830"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "account",
+						"type": "address"
+					},
+					{
+						"internalType": "uint256",
+						"name": "id",
+						"type": "uint256"
+					}
+				],
+				"name": "balanceOf",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "typeId",
+						"type": "uint256"
+					},
+					{
+						"internalType": "address",
+						"name": "burnTokenAddress",
+						"type": "address"
+					}
+				],
+				"name": "burnSerumForAddress",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			}
+		],
+		"devdoc": {
+			"kind": "dev",
+			"methods": {},
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {},
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"mocks/tokens/MAYC.sol": "Bacc"
+		},
+		"evmVersion": "istanbul",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": true,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"mocks/tokens/MAYC.sol": {
+			"keccak256": "0x706ece6474289e7301493d12adede5be0727c45c4afb6ff825e2b29703c17e97",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://1ce456655925d88d467db78d3860c83c380769fc6aea879a2a736b1e3b82e7ac",
+				"dweb:/ipfs/QmTpfL3ZZNWE2miGU68nqwDt4vSurcsN3rwZrefbZNNrfx"
+			]
+		}
+	},
+	"version": 1
+}

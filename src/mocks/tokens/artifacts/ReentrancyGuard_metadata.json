@@ -1,0 +1,54 @@
+{
+	"compiler": {
+		"version": "0.8.10+commit.fc410830"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [],
+		"devdoc": {
+			"details": "Contract module that helps prevent reentrant calls to a function. Inheriting from `ReentrancyGuard` will make the {nonReentrant} modifier available, which can be applied to functions to make sure there are no nested (reentrant) calls to them. Note that because there is a single `nonReentrant` guard, functions marked as `nonReentrant` may not call one another. This can be worked around by making those functions `private`, and then adding `external` `nonReentrant` entry points to them. TIP: If you would like to learn more about reentrancy and alternative ways to protect against it, check out our blog post https://blog.openzeppelin.com/reentrancy-after-istanbul/[Reentrancy After Istanbul].",
+			"kind": "dev",
+			"methods": {},
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {},
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"mocks/tokens/Azuki.sol": "ReentrancyGuard"
+		},
+		"evmVersion": "istanbul",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": true,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"mocks/tokens/Azuki.sol": {
+			"keccak256": "0xf8110a4b16447c6303f77ac803e237048766de187b3c7543943b28d23636faa5",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://583c4372097341f64f740b7d06dd505b46cea0212c92b4a7bca7f5a5e9492990",
+				"dweb:/ipfs/QmVEzEg8WQGX4FxWX3HxNDmfD2E8vNjwmyJD43emX22YwM"
+			]
+		},
+		"mocks/tokens/dependencies/ERC721A.sol": {
+			"keccak256": "0xfda2b522a60fa1e3cd34c26608c33f6398e365acbcebccaeb83b0cdbe5a224cb",
+			"license": "BUSL-1.1",
+			"urls": [
+				"bzz-raw://7281d8a45531215ee3e7ccd6f7c5466993cfd5ad9aa24acf43a687429a454c8b",
+				"dweb:/ipfs/Qma2cJRBEo6A3dZTiFeunihz1Wmv2jrQSrYPidLtG1SjD1"
+			]
+		}
+	},
+	"version": 1
+}

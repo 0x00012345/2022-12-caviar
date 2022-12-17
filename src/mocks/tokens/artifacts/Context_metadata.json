@@ -1,0 +1,45 @@
+{
+	"compiler": {
+		"version": "0.8.10+commit.fc410830"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [],
+		"devdoc": {
+			"kind": "dev",
+			"methods": {},
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {},
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"mocks/tokens/BAYC.sol": "Context"
+		},
+		"evmVersion": "istanbul",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": true,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"mocks/tokens/BAYC.sol": {
+			"keccak256": "0xb9caf801bf8f6b80b99f2b80bc3bdfe6fb440fcfcbae00fb2167583b8d95ccaa",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://68f73ebf8216b24b639841268d4c8266cef8059c3b3c4798f5e599977f19f9e2",
+				"dweb:/ipfs/QmVgjcz5uMqoYVt3n9Amzbfo19dhiDPwF5J9PPuEg1sUhX"
+			]
+		}
+	},
+	"version": 1
+}
