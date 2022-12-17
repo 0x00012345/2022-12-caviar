@@ -11,7 +11,6 @@ import {
 } from "../../../helpers/types";
 import {ERC20__factory} from "../../../../types";
 import {ERC721Enumerable__factory} from "../../../../types";
-import {Moonbirds__factory} from "../../../../types";
 import {impersonateAddress} from "../../../helpers/contracts-helpers";
 import {BigNumber, utils} from "ethers";
 import {getFirstSigner} from "../../../helpers/contracts-getters";
@@ -96,13 +95,6 @@ export const transferTokens = async () => {
       amount: 5,
     },
     {
-      name: ERC721TokenContractId.MOONBIRD,
-      whale: "0x7b557aA52d0055d84b1E3f5487D9018f318372C1",
-      address: tokens[ERC721TokenContractId.MOONBIRD],
-      type: AssetType.ERC721_MOONBIRD,
-      amount: 3,
-    },
-    {
       name: ERC721TokenContractId.MEEBITS,
       whale: "0xa25803ab86a327786bb59395fc0164d826b98298",
       address: tokens[ERC721TokenContractId.MEEBITS],
@@ -179,32 +171,6 @@ export const transferTokens = async () => {
           );
 
           await token.transferFrom(whaleAddress, receiver, tokenId);
-        }
-      } else if (type === AssetType.ERC721_MOONBIRD) {
-        const moonbirds = await Moonbirds__factory.connect(
-          address,
-          whale.signer
-        );
-        const balance = await moonbirds.balanceOf(whaleAddress);
-        console.log(`whale ${name} balance: ${balance.toString()}`);
-        let transferred = 0;
-        for (
-          let tokenId = 9999;
-          tokenId >= 1 && transferred <= amount;
-          tokenId -= 1
-        ) {
-          if ((await moonbirds.ownerOf(tokenId)) !== whaleAddress) {
-            continue;
-          }
-          console.log(
-            `transfer ${name}#${tokenId} from ${whaleAddress} to ${receiver}`
-          );
-          await moonbirds.safeTransferWhileNesting(
-            whaleAddress,
-            receiver,
-            tokenId
-          );
-          transferred += 1;
         }
       }
     } catch (err) {

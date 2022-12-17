@@ -302,12 +302,6 @@ export const getProxyImplementation = async (
 export const impersonateAddress = async (
   address: tEthereumAddress
 ): Promise<SignerWithAddress> => {
-  // await (DRE as HardhatRuntimeEnvironment).network.provider.request({
-  //   method: "hardhat_impersonateAccount",
-  //   params: [address],
-  // });
-
-  // const signer = await ethers.provider.getSigner(address);
 
   const provider = new ethers.providers.JsonRpcProvider(
     "http://localhost:8545"
